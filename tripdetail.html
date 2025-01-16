@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip Details</title>
+    <link rel="stylesheet" href="tripdetail.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Trip Details</h1>
+
+        <!-- Bus selection -->
+        <div class="select-bus">
+            <label for="bus-number">Enter Bus Number:</label>
+            <input type="text" id="bus-number" placeholder="Enter bus number">
+            <button onclick="getTripDetails()">Get Trip Details</button>
+        </div>
+
+        <!-- Error message -->
+        <div id="error-message" style="display:none; color: red;">
+            <p>Bus number not found. Please enter a valid bus number.</p>
+        </div>
+
+        <!-- Bus details table -->
+        <div id="trip-details">
+            <table id="bus-table">
+                <thead>
+                    <tr>
+                        <th>Bus No</th>
+                        <th>Type</th>
+                        <th>Departure</th>
+                        <th>Arrival</th>
+                        <th>Duration</th>
+                        <th>Charges</th>
+                        <th>Seats</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Trip details will be filled here -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Additional details -->
+        <div id="additional-details">
+            <h3>Additional Information</h3>
+            <div id="facilities">
+                <strong>Facilities:</strong>
+                <ul id="facility-list"></ul>
+            </div>
+            <div id="driver-details">
+                <strong>Driver Details:</strong>
+                <p id="driver-name"></p>
+                <p id="driver-contact"></p>
+            </div>
+            <div id="gps-details">
+                <strong>GPS Details:</strong>
+                <p id="gps-location"></p>
+            </div>
+            <div id="bus-details">
+                <strong>Bus Details:</strong>
+                <p id="bus-model"></p>
+                <p id="bus-capacity"></p>
+            </div>
+        </div>
+
+        <!-- Bus route map -->
+        <section class="map-section">
+            <h3>Bus Route Map</h3>
+            <div id="map" style="height: 400px; width: 100%;"></div>
+        </section>
+    </div>
+
+    <script src="tripDetails.js"></script>
+</body>
+</html>

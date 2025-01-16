@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPS Navigation - Bus Tracking</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+    <link rel="stylesheet" href="gps.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>GPS Navigation - Live Bus Tracking</h1>
+        </header>
+
+        <section class="bus-info">
+            <h2>Enter Bus No. to Track</h2>
+            <input type="text" id="bus-number" placeholder="Enter Bus No.">
+            <button onclick="trackBus()">Track Bus</button>
+        </section>
+
+        <section class="bus-details" id="bus-details">
+            <h2>Bus Details</h2>
+            <p id="error-message" style="color: red; display: none;">Bus not found. Please try again.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Bus No.</th>
+                        <th>Arrival</th>
+                        <th>Departure</th>
+                        <th>Type</th>
+                        <th>Duration</th>
+                        <th>Charges</th>
+                        <th>Seats Available</th>
+                    </tr>
+                </thead>
+                <tbody id="bus-table">
+                    <!-- Bus data will be injected by JavaScript -->
+                </tbody>
+            </table>
+        </section>
+
+        <section class="live-location">
+            <h2>Live Location</h2>
+            <div id="location">
+                <p>Please enter a bus number to track its live location.</p>
+            </div>
+        </section>
+       
+        <section class="map-section">
+            <div id="map" style="height: 400px; width: 100%;"></div>
+        </section>
+        
+    </div>
+
+    <footer>
+        <p>&copy; 2025 GPS Bus Navigation. All Rights Reserved.</p>
+    </footer>
+
+    
+    
+    <script src="gps.js"></script>
+    
+</body>
+</html>

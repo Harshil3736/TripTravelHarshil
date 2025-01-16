@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRTS Bus Information</title>
+    <link rel="stylesheet" href="brts.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>BRTS Bus Information</h1>
+        </header>
+
+        <section class="bus-details">
+            <h2>Bus Details</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Bus No.</th>
+                        <th>Arrival</th>
+                        <th>Departure</th>
+                        <th>Type</th>
+                        <th>Duration</th>
+                        <th>Charges</th>
+                        <th>Seats Available</th>
+                    </tr>
+                </thead>
+                <tbody id="bus-table">
+                    <!-- Bus data will be injected by JavaScript -->
+                </tbody>
+            </table>
+        </section>
+
+        <section class="bus-timings">
+            <h2>Timings</h2>
+            <ul id="bus-timing-list">
+                <!-- Bus timings will be injected by JavaScript -->
+            </ul>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 BRTS Bus Information. All Rights Reserved.</p>
+    </footer>
+
+    <script src="brts.js"></script>
+</body>
+</html>
