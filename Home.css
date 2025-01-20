@@ -18,13 +18,15 @@
 header{
     display: flex;
     margin: 0;
-    padding: 50px;
+    padding: 15px;
     background-color: #ffffff;
     box-shadow: 0 0 10px rgba(0,0,0, 0.1);
+    justify-content: space-between;
+    width: 98%;
     align-items: center;
 }
 .logo img{
-    max-width: 30%;
+    max-width: 15%;
 }
 .nav-menu ul{
     display: flex;
@@ -32,7 +34,7 @@ header{
 }
 .nav-menu li{
     list-style: none;
-    margin-right: 100px;
+    margin-right: 50px;
     
 }
 .nav-menu li:last-child{
